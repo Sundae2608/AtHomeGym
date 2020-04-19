@@ -61,8 +61,9 @@ class Exercise:
         self.add_sound(exercise)
         self.add_time(time)
         self.add_sound("Done!")
-        self.add_sound("Rest!")
-        self.add_time(rest_time)
+        if rest_time != 0:
+            self.add_sound("Rest!")
+            self.add_time(rest_time)
 
     def play_exercise(self):
         for element in self.elements:
